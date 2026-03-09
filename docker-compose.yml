@@ -1,0 +1,15 @@
+services:
+  device34App:
+    container_name: device34AppContainer
+    build: .
+    image: device34App:latest
+    ports:
+      - 80:80
+    expose:
+      - 80
+    networks:
+      - internalnet
+
+networks:
+  internalnet:
+    driver: bridge
